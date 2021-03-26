@@ -1,0 +1,36 @@
+$sm: 375px;
+$md: 425px;
+$lg: 768px;
+$xl: 1024px;
+$desktop: 1440px; 
+
+
+@mixin view-sm {
+    @media (min-width: $sm) {
+        @content
+    }
+};
+
+@mixin view-md {
+    @media (min-width: $md) {
+        @content
+    }
+};
+
+@mixin view-lg {
+    @media (min-width: $lg) {
+        @content
+    }
+};
+
+@mixin view-xl {
+    @media (min-width: $xl) {
+        @content
+    }
+};
+
+@mixin view-desktop {
+    @media (min-width: $desktop) {
+        @content
+    }
+};
