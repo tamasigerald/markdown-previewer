@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function Preview() {
+export function Preview() {
     return <div>Preview</div>
 }

@@ -1,16 +1,42 @@
-const { default: Edit } = require("components/Edit");
-const { default: Header } = require("components/Header");
-const { default: Layout } = require("components/Layout");
-const { default: Preview } = require("components/Preview");
+import { InputContext } from "contexts/InputContext";
+import { useEffect, useState } from "react";
+// import marked from 'marked';
+
+import { Edit } from "components/Edit";
+import { Header } from "components/Header";
+import { Layout } from "components/Layout";
+import { Preview } from "components/Preview";
 
 
 function App() {
+
+  const [ marked, setMarked ] = useState('');
+
+  
+  const getData =  async () => {
+    let data = await import('helpers/initialValue.md');
+
+    fetch(data.default)
+    .then(res => {
+      return res.text();
+    })
+    .then(text => {
+      setMarked(text);
+    })
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <> 
     <Header />
     <Layout>
-      <Edit />
-      <Preview />
+      <InputContext.Provider value={{ marked, setMarked }}>
+        <Edit />
+        <Preview />
+      </InputContext.Provider>
     </Layout>
     </>
   );
