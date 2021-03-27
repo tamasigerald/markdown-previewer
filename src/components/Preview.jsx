@@ -1,5 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Marked from 'marked';
+
+import { InputContext } from 'contexts/InputContext';
 
 export function Preview() {
-    return <div>Preview</div>
+
+    const { marked } = useContext(InputContext);
+
+    return <div>
+        <div dangerouslySetInnerHTML={{ __html: Marked(marked) }}>
+
+        </div>
+    </div>
 }

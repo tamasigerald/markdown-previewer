@@ -1,6 +1,5 @@
 import { InputContext } from "contexts/InputContext";
 import { useEffect, useState } from "react";
-// import marked from 'marked';
 
 import { Edit } from "components/Edit";
 import { Header } from "components/Header";
