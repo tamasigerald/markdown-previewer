@@ -1,7 +1,7 @@
 import { InputContext } from "contexts/InputContext";
 import { useEffect, useState } from "react";
 
-import { Edit } from "components/Edit";
+import { Edit } from "components/Editor";
 import { Header } from "components/Header";
 import { Layout } from "components/Layout";
 import { Preview } from "components/Preview";

@@ -1,0 +1,47 @@
+.preview {
+    background-color: $body;
+    color: $text;
+    min-height: 70vh;
+    width: 90vw;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid;
+    border-color: $secondary;
+    outline: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    resize: none;
+
+    &:hover {
+        box-shadow: 0px 0px 10px 2px $secondary;
+    }
+
+    & * {
+        max-width: 100%;
+    }
+
+    
+    & > pre {
+        position: relative;
+        overflow: auto;
+        background-color: $primary;
+        padding: 1rem;
+    }
+
+    & code {
+        background-color: $primary;
+    }
+
+    & a {
+        color: $secondary;
+
+        &:hover {
+            color: $text;
+        }
+    }
+
+}

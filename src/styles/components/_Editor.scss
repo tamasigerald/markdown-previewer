@@ -1,0 +1,19 @@
+.editor {
+    background-color: $body;
+    color: $text;
+    min-height: 70vh;
+    width: 90vw;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-color: $secondary;
+    outline: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    resize: none;
+
+    &:focus {
+        box-shadow: 0px 0px 10px 2px $secondary;
+    }
+}
