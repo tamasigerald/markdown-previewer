@@ -1,6 +1,12 @@
 .layout {
     margin-top: 80px;
     padding: 5vw;
+
+    @include view-lg {
+        display: flex;
+        justify-content: space-between;
+        padding: 4vw 5vw;
+    }
 }
 
 .section {
@@ -8,9 +14,16 @@
     background-color: $primary;
     margin: 2rem 0;
     padding: 2rem 1rem;
+    height: 70vh;
     width: 100%;
 
     &__title {
         color: $secondary;
+    }
+
+    @include view-lg {
+        margin: 0;
+        max-height: 73vh;
+        width: 42vw;
     }
 }

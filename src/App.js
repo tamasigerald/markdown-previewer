@@ -5,6 +5,7 @@ import { Edit } from "components/Editor";
 import { Header } from "components/Header";
 import { Layout } from "components/Layout";
 import { Preview } from "components/Preview";
+import { Footer } from "components/Footer";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Preview />
       </InputContext.Provider>
     </Layout>
+    <Footer />
     </>
   );
 }

@@ -1,0 +1,20 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    bottom: 0s;
+    background-color: $primary;
+    height: 60px;
+    width: 100vw;
+
+    & a {
+        color: $secondary;
+
+        &:hover {
+            color: $text;
+        }
+    }
+}
